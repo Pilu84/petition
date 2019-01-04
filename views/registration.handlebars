@@ -1,0 +1,25 @@
+{{> mainnav }}
+
+<div class="bg">
+<h2>{{title}}</h2>
+
+<p>Please give your name, your email and a password</p>
+
+
+<form method="post">
+
+    <p class="error">{{ errorText.first_name }}</p>
+    <input type="text" name="first_name" placeholder="First name" value="{{data.first_name}}">
+    <p class="error">{{ errorText.last_name }}</p>
+    <input type="text" name="last_name" placeholder="Last name" value="{{data.last_name}}">
+    <p class="error">{{ errorText.email }}</p>
+    <input type="text" name="email" placeholder="Email" value="{{data.email}}">
+    <p class="error">{{ errorText.pass }}</p>
+    <input type="password" name="pass" placeholder="Password">
+    <input type="submit" name="submit" value="Sign up">
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+</form>
+
+<p>If you already a member, please <a href="/login">log in</a></p>
+</div>

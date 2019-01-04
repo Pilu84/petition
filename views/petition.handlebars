@@ -1,0 +1,20 @@
+{{> nav }}
+<div class="bg">
+<h2>{{title}}</h2>
+
+    <p class="error">{{ errorText.data }}</p>
+    <p class="error">{{ errorText.sign }}</p>
+
+
+<p>Dear {{data.first_name}} {{data.last_name}}, for a validete vote, please sign in!</p>
+
+<form method="post">
+
+    <input type="hidden" name="sign">
+    <canvas id="canvsign" width="350px" height="200px"></canvas>
+    <input type="submit" name="submit" value="Submit">
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+</form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/canvas.js" charset="utf-8"></script>

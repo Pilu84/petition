@@ -1,0 +1,19 @@
+{{> nav }}
+<div class="bg">
+<h2>{{title}}</h2>
+
+
+    {{#if sign}}
+    <div id="signature">
+    <img src="{{ sign }}"></img>
+</div>
+    {{else}}
+    <p>You did not yet signatured our petition, <a href="/petition">please sign in</a></p>
+    {{/if}}
+
+
+<div id="signed">
+    <a href="/signers">See all {{ number }} signers</a>
+</div>
+
+</div>

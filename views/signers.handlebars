@@ -1,0 +1,16 @@
+{{> nav }}
+<div class="bg">
+<h2>They has signed in</h2>
+<h2>See all {{ number }} signers</h2>
+
+{{#each data}}
+
+{{#if url}}
+<div class="signers">Name: <a href="http://{{url}}" target="_blank">{{ first_name }} {{ last_name }}</a> {{age}} from <a href="/signers/{{city}}">{{city}}</a></div>
+{{else}}
+<div class="signers">Name: {{ first_name }} {{ last_name }} {{age}}  <a href="/signers/{{city}}">{{city}}</a></div>
+{{/if}}
+{{/each}}
+</ul>
+<div class="button"><a href="/thanks"><p>Back</p></a></div>
+</div>
